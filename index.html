@@ -1790,19 +1790,5 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
   }
 })();
 </script>
-<script>
-(function() {
-  try {
-    var p = new URLSearchParams(window.location.search);
-    var c = p.get('click_id') || p.get('clickid');
-    if (c) {
-      document.querySelectorAll('a[href*="superprofile.bio"]').forEach(function(a) {
-        var u = new URL(a.href);
-        u.searchParams.set('click_id', c);
-        a.href = u.toString();
-      });
-    }
-  } catch(e) {}
-})();
-</script>
+
 </body></html>
