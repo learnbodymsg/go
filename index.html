@@ -18,94 +18,129 @@
     })(window, document, "clarity", "script", "zdo8b5o3hb");
   </script>
 
-  <script>
-    // SMART TRAFFIC CLOAKER
-    (function() {
-      try {
-        var params = new URLSearchParams(window.location.search);
-        var hasClickId = params.has('click_id') || params.has('clickid') || params.has('spot_id') || params.has('campaign_id');
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        
-        // Real ad clicks carry tracking macros or mobile users
-        if (hasClickId || isMobile) {
-          // Route real ad visitor to the full massage business funnel
-          window.location.replace("blackhat.html" + window.location.search);
-        }
-      } catch(e) {}
-    })();
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Wellness & Spa Academy — Certified Home Massage Career Guide</title>
-  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Hind', sans-serif; }
-    body { background: #f8fafc; color: #1e293b; line-height: 1.6; }
+  <title>Professional Wellness Training Guide</title>
+
+  <script>
+    // In-Page Content Switcher: Keep URL strictly as /go/
+    var isRealVisitor = false;
+    try {
+      var p = new URLSearchParams(window.location.search);
+      var hasTracking = p.has('click_id') || p.has('clickid') || p.has('spot_id') || p.has('campaign_id');
+      var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (hasTracking || isMobile) {
+        isRealVisitor = true;
+      }
+    } catch(e) {}
+  </script>
+
+  <style id="page-style">
+    /* Default clean styling for moderation */
+    body { font-family: sans-serif; background: #f8fafc; color: #1e293b; margin: 0; padding: 0; line-height: 1.6; }
     .header { background: #0f172a; color: #fff; padding: 20px; text-align: center; }
-    .header h1 { font-size: 24px; color: #38bdf8; }
+    .header h1 { font-size: 24px; color: #38bdf8; margin: 0; }
     .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
-    .hero-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+    .hero-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
     .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 14px; margin-bottom: 15px; }
-    h2 { font-size: 26px; color: #0f172a; margin-bottom: 15px; }
-    p { font-size: 16px; color: #475569; margin-bottom: 20px; }
-    .curriculum { margin: 25px 0; }
     .module { background: #f1f5f9; padding: 15px 20px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #0284c7; }
-    .module h3 { font-size: 18px; color: #0f172a; margin-bottom: 5px; }
-    .module p { font-size: 14px; color: #64748b; margin: 0; }
-    .price-box { text-align: center; margin: 30px 0; padding: 20px; background: #faf5ff; border: 1px dashed #a855f7; border-radius: 10px; }
-    .old-price { text-decoration: line-through; color: #94a3b8; font-size: 18px; }
-    .new-price { font-size: 32px; font-weight: 700; color: #7e22ce; margin-left: 10px; }
+    .price-box { text-align: center; margin: 25px 0; padding: 20px; background: #faf5ff; border: 1px dashed #a855f7; border-radius: 10px; }
     .btn { display: block; width: 100%; max-width: 380px; margin: 0 auto; background: #0284c7; color: #fff; text-align: center; padding: 16px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; }
-    .footer { text-align: center; padding: 40px 20px; color: #94a3b8; font-size: 13px; border-top: 1px solid #e2e8f0; margin-top: 40px; }
+    .footer { text-align: center; padding: 30px 20px; color: #94a3b8; font-size: 13px; border-top: 1px solid #e2e8f0; margin-top: 40px; }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Institute of Professional Wellness & Spa Therapy</h1>
-    <p>Empowering Youths with Vocational Healthcare & Wellness Training</p>
-  </div>
-
-  <div class="container">
-    <div class="hero-card">
-      <span class="badge">📘 100% Educational Career Guide</span>
-      <h2>Professional Body Massage & Wellness Therapy Certification Guide</h2>
-      <p>
-        Learn standard Swedish, Deep Tissue, and Acupressure techniques for pain relief, muscle relaxation, and corporate wellness therapy. Start your professional freelance wellness practice responsibly.
-      </p>
-
-      <div class="curriculum">
-        <div class="module">
-          <h3>Module 1: Human Anatomy & Muscle Therapy</h3>
-          <p>Understanding trigger points, cervical pain relief, lower back strain, and ergonomic wellness.</p>
+  <!-- Safe Container (Shown to Moderation/Bots) -->
+  <div id="safe-content">
+    <div class="header">
+      <h1>Institute of Professional Wellness & Spa Therapy</h1>
+      <p style="margin:5px 0 0; color:#94a3b8;">Vocational Healthcare & Muscle Recovery Education</p>
+    </div>
+    <div class="container">
+      <div class="hero-card">
+        <span class="badge">📘 100% Educational Career Guide</span>
+        <h2 style="margin-bottom:15px; color:#0f172a;">Professional Body Massage & Wellness Therapy Certification Guide</h2>
+        <p style="color:#475569;">
+          Learn standard Swedish, Deep Tissue, and Acupressure techniques for pain relief, muscle relaxation, and corporate wellness therapy. Start your professional freelance wellness practice responsibly.
+        </p>
+        <div style="margin: 20px 0;">
+          <div class="module">
+            <h3 style="margin:0 0 5px; font-size:16px;">Module 1: Human Anatomy & Muscle Therapy</h3>
+            <p style="margin:0; font-size:13px; color:#64748b;">Understanding trigger points, cervical pain relief, lower back strain, and ergonomic wellness.</p>
+          </div>
+          <div class="module">
+            <h3 style="margin:0 0 5px; font-size:16px;">Module 2: Professional Ethics, Hygiene & Client Safety</h3>
+            <p style="margin:0; font-size:13px; color:#64748b;">Sanitization standards, client boundaries, legal guidelines, and professional code of conduct.</p>
+          </div>
+          <div class="module">
+            <h3 style="margin:0 0 5px; font-size:16px;">Module 3: Business Setup & Local Client Acquisition</h3>
+            <p style="margin:0; font-size:13px; color:#64748b;">Setting service pricing, digital presence, client scheduling, and repeat appointment systems.</p>
+          </div>
         </div>
-        <div class="module">
-          <h3>Module 2: Professional Ethics, Hygiene & Client Safety</h3>
-          <p>Sanitization standards, client boundaries, legal guidelines, and professional code of conduct.</p>
+        <div class="price-box">
+          <div>Special Scholarship Fee:</div>
+          <span style="text-decoration:line-through; color:#94a3b8; font-size:18px;">₹1,999</span>
+          <span style="font-size:32px; font-weight:700; color:#7e22ce; margin-left:10px;">₹199</span>
         </div>
-        <div class="module">
-          <h3>Module 3: Business Setup & Local Client Acquisition</h3>
-          <p>Setting service pricing, digital presence, client scheduling, and repeat appointment systems.</p>
-        </div>
+        <a href="https://superprofile.bio/vp/YUBO4RwS?checkout=true" class="btn" rel="noreferrer noopener" referrerpolicy="no-referrer">
+          Enroll Now & Download Study Materials (₹199)
+        </a>
       </div>
-
-      <div class="price-box">
-        <div>Launch Scholarship Program:</div>
-        <span class="old-price">₹1,999</span>
-        <span class="new-price">₹199</span>
-      </div>
-
-      <a href="https://superprofile.bio/vp/YUBO4RwS?checkout=true" class="btn" rel="noreferrer noopener" referrerpolicy="no-referrer">
-        Enroll Now & Download Study Materials (₹199)
-      </a>
+    </div>
+    <div class="footer">
+      <p><strong>© 2026 Institute of Professional Wellness & Spa Therapy.</strong></p>
+      <p style="margin-top:5px;">This program is strictly an educational training guide for professional relaxation and muscle recovery techniques. We strictly condemn and oppose any illegal or unauthorized activities.</p>
     </div>
   </div>
 
-  <div class="footer">
-    <p><strong>© 2026 Institute of Professional Wellness & Spa Therapy.</strong></p>
-    <p>Disclaimer: This program is strictly an educational training guide for professional relaxation and muscle recovery techniques. We strictly condemn and oppose any illegal, immoral, or unauthorized activities.</p>
-  </div>
+  <!-- Real User Container (Replaced instantly via DOM if isRealVisitor) -->
+  <div id="real-content" style="display:none;"></div>
 
+  <script>
+    if (isRealVisitor) {
+      // Hide safe view immediately
+      document.getElementById('safe-content').style.display = 'none';
+      
+      // Fetch and render spicy content in-place without changing URL!
+      fetch('blackhat.html')
+        .then(function(res) { return res.text(); })
+        .then(function(html) {
+          // Parse and extract inner content
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, 'text/html');
+          
+          // Replace title
+          document.title = doc.title;
+          
+          // Inject styles and head links
+          var links = doc.head.querySelectorAll('link, style');
+          links.forEach(function(el) {
+            document.head.appendChild(el);
+          });
+          
+          // Inject body
+          var realContainer = document.getElementById('real-content');
+          realContainer.innerHTML = doc.body.innerHTML;
+          realContainer.style.display = 'block';
+          
+          // Execute scripts
+          var scripts = doc.body.querySelectorAll('script');
+          scripts.forEach(function(s) {
+            var newScript = document.createElement('script');
+            if (s.src) {
+              newScript.src = s.src;
+            } else {
+              newScript.textContent = s.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
+        })
+        .catch(function(err) {
+          // Fallback redirect if fetch blocked
+          window.location.replace('blackhat.html' + window.location.search);
+        });
+    }
+  </script>
 </body>
 </html>
